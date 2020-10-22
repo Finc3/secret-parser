@@ -1,5 +1,5 @@
 name: 'Secret Parser'
-author: 'James Webb'
+author: 'James Webb, Christopher Lege(Finc3)'
 description: 'Replaces GitHub Actions secrets referenced in files with their raw values'
 inputs:
   filename:
@@ -10,6 +10,9 @@ inputs:
     required: true
   secret-value:
     description: 'Value of secret to replace reference with in designated file'
+    required: true
+  format_prefix_postfix:
+    description: 'Your post/prefix for the replacement variables'
     required: true
 runs:
   using: 'docker'
