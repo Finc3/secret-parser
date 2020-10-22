@@ -11,13 +11,13 @@ inputs:
   secret-value:
     description: 'Value of secret to replace reference with in designated file'
     required: true
-  format_prefix_postfix:
+  format-prefix-postfix:
     description: 'Your post/prefix for the replacement variables'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: ['${{ inputs.filename }}', '${{ inputs.secret-name }}', '${{ inputs.secret-value }}']
+  args: ['${{ inputs.filename }}', '${{ inputs.secret-name }}', '${{ inputs.secret-value }}', '${{ inputs.format-prefix-postfix }}']
 branding:
   icon: 'lock'
   color: 'blue'
